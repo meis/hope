@@ -6,7 +6,9 @@
   "scripts": {
     "build": "parcel build --out-file index.html",
     "start": "http-server ./dist -p 8000",
-    "dev": "parcel -p 8000 --hmr-port 8001 index.html"
+    "dev": "parcel -p 8000 --hmr-port 8001 index.html",
+    "test": "mocha --require test/setup.js --recursive test",
+    "test-watch": "npm run test -- --watch"
   },
   "author": "marc.egea.sala@gmail.com",
   "license": "MIT",
@@ -18,8 +20,16 @@
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "jsdom": "^11.7.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.0.5",
     "parcel-bundler": "^1.7.0",
     "parcel-plugin-vue": "^1.5.0",
-    "@vue/component-compiler-utils": "^1.0.0"
+    "require-extension-hooks": "^0.3.2",
+    "require-extension-hooks-babel": "^0.1.1",
+    "require-extension-hooks-vue": "^1.0.0",
+    "@vue/component-compiler-utils": "^1.0.0",
+    "vue-test-utils": "^1.0.0-beta.11"
   }
 }

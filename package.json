@@ -6,15 +6,20 @@
   "scripts": {
     "build": "parcel build --out-file index.html",
     "start": "http-server ./dist -p 8000",
-    "dev": "parcel -p 8000 index.html"
+    "dev": "parcel -p 8000 --hmr-port 8001 index.html"
   },
   "author": "marc.egea.sala@gmail.com",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.1",
+    "vue": "^2.5.16",
+    "vuetify": "^1.0.11"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.7.0"
+    "babel-preset-env": "^1.6.1",
+    "parcel-bundler": "^1.7.0",
+    "parcel-plugin-vue": "^1.5.0",
+    "@vue/component-compiler-utils": "^1.0.0"
   }
 }
